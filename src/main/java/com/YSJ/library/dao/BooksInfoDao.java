@@ -9,7 +9,7 @@ import java.util.List;
 
 public class BooksInfoDao {
 
-    // 插入图书
+    // Inserting Book information
     public void insert(BooksInfo book){
         String sql="insert into books_info(bid, bookname, price, description, author, createtime, state)" +
                 " values (uuid(),?,?,?,?,now(),1)";
@@ -20,7 +20,7 @@ public class BooksInfoDao {
         }
     }
 
-    // 查找所有的书返回数组
+    // collect a list for all books, return the array.
     public List<BooksInfo> findForALl(){
         List<BooksInfo> books=new ArrayList<>();
         try {
