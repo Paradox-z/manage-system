@@ -2,9 +2,9 @@
 
 ## technology
 **1**  
-Developed with Java, based on the command line console. 
+Developed with Java, based on the command line console.  
 **2**  
-Development environment: IntelliJ IDEA2022, MySQL database 8.0 and jdk1.8. 
+Development environment: IntelliJ IDEA2022, MySQL database 8.0 and jdk1.8.  
 **3**  
 Services involved in the DAL data access layer, written in the dao package. 
 
