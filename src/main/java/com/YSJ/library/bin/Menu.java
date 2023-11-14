@@ -19,15 +19,15 @@ import java.util.stream.Collectors;
 public class Menu {
     /*
      *
-     * 阶梯租金
+     * stepped rent
      * 7 1 1
      * 14 2 2
      * *** 3 3*
      *
-     * 工作流 work flow 流程
-     * 公司
-     * * 采购 进货 进货单  销售 出库单 库存 仓库管理
-     * 原材料 加工 拼装 产品    销售
+     * work flow
+     * firm
+     * * Purchasing, Incoming goods, Incoming orders, Sales, Outgoing orders, Inventory, Warehouse management
+     * Raw materials, Processing, Assembling, Products, Sales
      * * * * * */
 
     public SysAdmin sysAdmin;//记录管理员登陆人信息
