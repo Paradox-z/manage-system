@@ -30,9 +30,9 @@ public class Menu {
      * Raw materials, Processing, Assembling, Products, Sales
      * * * * * */
 
-    public SysAdmin sysAdmin;//记录管理员登陆人信息
+    public SysAdmin sysAdmin;//Record logged in administrator information.
 
-    public SysUser sysUser;//记录登陆的用户信息
+    public SysUser sysUser;//Record logged in user information.
 
     private SysAdminDao adminDao = new SysAdminDao();
 
@@ -50,7 +50,7 @@ public class Menu {
 
     public void chooseLogin() {
         for (; ; ) {
-            System.out.println("1、用户登陆 2、管理员登陆");
+            System.out.println("1. User access | 2. Admin access");
             String choose = input.next();
             if (choose.equals("2")) {
                 Main.MENU = 2;
