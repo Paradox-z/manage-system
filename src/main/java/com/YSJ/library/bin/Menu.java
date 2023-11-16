@@ -63,12 +63,12 @@ public class Menu {
         }
     }
 
-    //用户登陆
+    //Login
     public void userLogin() {
         for (; ; ) {
-            System.out.println("请输入账号");
+            System.out.println("Account: ");
             String name = input.next();
-            System.out.println("请输入密码");
+            System.out.println("Password: ");
             String pwd = input.next();
             SysUser user = userDao.login(name, pwd);
             if (user != null) {
@@ -76,8 +76,8 @@ public class Menu {
                 Main.MENU = 5;
                 break;
             } else {
-                System.out.println("账号不存在或者密码错误！");
-                System.out.println("选择 y继续 ");
+                System.out.println("No account or wrong password.");
+                System.out.println("Tap 'y' to continue: ");
                 String choose = input.next();
                 if (!choose.equals("y")) {
                     Main.MENU = 1;
@@ -88,15 +88,15 @@ public class Menu {
 
     }
 
-    //用户的主菜单
+    //MainMenu
     public void userMainMenu() {
         for (; ; ) {
-            System.out.println("1、查看交易记录 2、租书 3、查看用户信息 4、还书 0、返回用户管理员登陆");
+            System.out.println("1. Trade log; 2. Rent books; 3. User information; 4. Return books; 0. Turn back to login in admin");
             String choose = input.next();
             if (choose.equals("1")) {
                 List<RechargeRecord> rechargeRecordList = recodeDao.findRecodeByUid(this.sysUser.getUid());
                 if (rechargeRecordList.size() == 0) {
-                    System.out.println("您还没有充值记录,赶紧去充值！");
+                    System.out.println("If you haven't topped up for your account yet, please do so now!");
                 } else {
                     rechargeRecordList.forEach(u -> {
                         System.out.println(u);
