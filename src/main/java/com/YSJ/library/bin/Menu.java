@@ -104,27 +104,27 @@ public class Menu {
                 }
 
             } else if (choose.equals("3")) {
-                System.out.println("用户名\t真实姓名\t\t用户创建时间\t\t\t\t\t电话\t\t余额");
+                System.out.println("User name\tReal name\t\tUser created time\t\t\t\t\tPhone\t\tBalance");
                 System.out.println(sysUser.getUsername() + "\t\t" + sysUser.getRealname() + "\t\t\t" + sysUser.getCreatetime()
                         + "\t\t" + sysUser.getMobile() + "\t\t" + sysUser.getAmount());
             } else if (choose.equals("0")) {
-                this.sysUser = null;//退出登陆
+                this.sysUser = null;//Log out
                 Main.MENU = 1;
                 break;
             } else if (choose.equals("2")) {
                 booksInfoDao.findForALl().forEach(b -> {
                     System.out.println(b);
                 });
-                System.out.println("请输入租书编号");
+                System.out.println("Please enter rental book's number: ");
                 String bid = input.next();
                 if (booksInfoDao.findForALl().stream().filter(f -> f.getBid().equals(bid)).count() > 0) {
                     RentInfo rentInfo = new RentInfo();
                     rentInfo.setUid(sysUser.getUid());
                     rentInfo.setBid(bid);
                     rentInfoDao.addRent(rentInfo);
-                    System.out.println("已经发送租赁请求，等待管理员同意，请耐心等待....");
+                    System.out.println("Already posted your rental book request, waiting for administrator's approval, please be patient.");
                 } else {
-                    System.out.println("该编号不存在");
+                    System.out.println("This number does not exist.");
 
                 }
             } else if (choose.equals("4")) {
