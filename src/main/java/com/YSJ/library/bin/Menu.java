@@ -128,46 +128,46 @@ public class Menu {
 
                 }
             } else if (choose.equals("4")) {
-                // 查找该uid下已经接走的书
+                // Search for the borrowed book linking to a uid.
                 List<RentInfo> rentInfoList = rentInfoDao.getRentInfoById(sysUser.getUid());
                 if (rentInfoList.size() == 0) {
-                    System.out.println("您还没有借书记录，赶紧去借书吧！");
+                    System.out.println("You haven't borrowed a book, then go from now!");
                 } else {
-                    System.out.println("您的借书列表：");
-                    System.out.println("书籍编号\t\t日租金\t\t押金\t\t\t已借天数\t\t\t起始时间\t\t\t\t\t\t截至时间");
+                    System.out.println("Your rental booklist: ");
+                    System.out.println("Book number\t\tDaily rental\t\tDeposit\t\t\tRent days\t\t\tStart time\t\t\t\t\t\tDead line");
 
                     for (RentInfo rentInfo : rentInfoList) {
-                        // 求出该书借了几天
+                        // To calculate how many days this book was borrowed.
                         Timestamp now = Timestamp.from(Instant.now());
                         Duration duration = Duration.between(rentInfo.getCreatetime().toInstant(), now.toInstant());
                         long days = duration.toDays() + 1;
                         System.out.println(rentInfo.getBid() + "\t\t\t" + rentInfo.getPrice() + "\t\t" + rentInfo.getDeposit()
                                 + "\t\t" +days + "\t\t\t\t" + rentInfo.getCreatetime() + "\t\t" + rentInfo.getEndtime());
                     }
-                    System.out.println("您要提前还书的话，请输入书籍编号(输入不存在的编号将会返回上一层)：");
+                    System.out.println("Should you wish to return the book forward, enter the book number. If incorrect, it will automatically be reversed to the previous action: ");
                     String tempBookId = input.next();
-                    // 在集合中过滤出用户所输入的id对应的借书记录
+                    // Filter the ArrayList to find rental books records corresponding to the number entered by users.
                     List<RentInfo> collect = rentInfoList.stream().filter(r -> r.getBid().equals(tempBookId)).collect(Collectors.toList());
                     if (collect.size()>0){
                         RentInfo tempRentInfo = collect.get(0);
 
                         boolean b = rentInfoDao.ReturnBook(collect.get(0).getRid());
                         if (b){
-                            System.out.println("还书成功");
-                            // 计算天数
+                            System.out.println("Return books successfully.");
+                            // Calculate rent days
                             Timestamp now = Timestamp.from(Instant.now());
                             Duration duration = Duration.between(tempRentInfo.getCreatetime().toInstant(), now.toInstant());
                             BigDecimal daysBigDe = BigDecimal.valueOf(duration.toDays() + 1);
 
-                            BigDecimal multiply = tempRentInfo.getPrice().multiply(daysBigDe);// 计算租金
-                            userDao.reduceUserAmount(multiply,tempRentInfo.getUid());// 扣除租金
+                            BigDecimal multiply = tempRentInfo.getPrice().multiply(daysBigDe);// Calculate rental
+                            userDao.reduceUserAmount(multiply,tempRentInfo.getUid());// Deduct rental
                             RechargeRecord rechargeRecord= new RechargeRecord();
                             rechargeRecord.setAmount(multiply.negate());
                             rechargeRecord.setUid(tempRentInfo.getUid());
                             rechargeRecord.setState(3);
                             recodeDao.payRent(rechargeRecord);
                         }else {
-                            System.out.println("还书失败");
+                            System.out.println("Failed to return books.");
                         }
                     }
 
