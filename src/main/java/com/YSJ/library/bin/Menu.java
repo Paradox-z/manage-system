@@ -63,7 +63,7 @@ public class Menu {
         }
     }
 
-    //Login
+    //User login
     public void userLogin() {
         for (; ; ) {
             System.out.println("Account: ");
@@ -177,12 +177,12 @@ public class Menu {
 
     }
 
-    //管理员登陆
+    //Administrator login
     public void adminLogin() {
         for (; ; ) {
-            System.out.println("请输入账号");
+            System.out.println("Account: ");
             String name = input.next();
-            System.out.println("清输入密码");
+            System.out.println("Password: ");
             String pwd = input.next();
             SysAdmin admin = adminDao.adminLogin(name, pwd);
             if (admin != null) {
@@ -190,8 +190,8 @@ public class Menu {
                 Main.MENU = 3;
                 break;
             } else {
-                System.out.println("账号不存在或者密码错误！");
-                System.out.println("选择 y继续 ");
+                System.out.println("No account or wrong password.");
+                System.out.println("Tap 'y' to continue: ");
                 String choose = input.next();
                 if (!choose.equals("y")) {
                     Main.MENU = 1;
