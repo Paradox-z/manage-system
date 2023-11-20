@@ -205,17 +205,17 @@ public class Menu {
 
     public void adminMainMenu() {
         for (; ; ) {
-            System.out.println("1、充值 2、管理员管理 3、用户管理 4、添加图书 5、查看图书信息 6、查看租赁信息 7、租赁管理 0、返回用户管理员登陆");
+            System.out.println("1. Recharge 2. Administor management 3. User management 4. add books 5. check books information 6. check rental books information 7. rent management 0. Turn back to login in user");
             String choose = input.next();
             if (choose.equals("4")) {
                 try {
-                    System.out.println("请输入书名");
+                    System.out.println("Bookname: ");
                     String bookname = input.next();
-                    System.out.println("请输入价格");
+                    System.out.println("Price: ");
                     BigDecimal price = input.nextBigDecimal();
-                    System.out.println("请输入简介");
+                    System.out.println("Description: ");
                     String description = input.next();
-                    System.out.println("请输入作者");
+                    System.out.println("Author: ");
                     String author = input.next();
                     BooksInfo book = new BooksInfo();
                     book.setBookname(bookname);
@@ -225,7 +225,7 @@ public class Menu {
                     booksInfoDao.insert(book);
                 } catch (Exception e) {
                     input = new Scanner(System.in);
-                    System.out.println("价格输入不合法");
+                    System.out.println("Price entered illegal.");
                 }
             } else if (choose.equals("5")) {
                 booksInfoDao.findForALl().forEach(b -> {
@@ -235,7 +235,7 @@ public class Menu {
                 userDao.list().forEach(u -> {
                     System.out.println(u);
                 });
-                System.out.println("请输入需要充值的账号");
+                System.out.println("Enter your account for recharging.");
                 String uid = input.next();
                 try {
                     BigDecimal m;
