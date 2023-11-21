@@ -240,32 +240,32 @@ public class Menu {
                 try {
                     BigDecimal m;
                     while (true) {
-                        System.out.println("请输入充值金额");
+                        System.out.println("Input your recharing amount: ");
                         m = input.nextBigDecimal();
                         int i = m.compareTo(BigDecimal.ZERO);
                         if (i > 0) {
                             break;
                         } else {
-                            System.out.println("输入金额不合法");
+                            System.out.println("Input is not legal.");
                         }
                     }
 
 
-                    String aid = this.sysAdmin.getAid();//充值人;
+                    String aid = this.sysAdmin.getAid();//recharge man;
                     RechargeRecord recode = new RechargeRecord();
                     recode.setUid(uid);
                     recode.setAmount(m);
                     recode.setAid(aid);
                     recode.setState(1);
-                    recodeDao.addRecode(recode);//增加充值记录
+                    recodeDao.addRecode(recode);//recharge record
                     userDao.updateUserAmount(m, uid);
-                    System.out.println("充值成功！");
+                    System.out.println("Successfully recharged!");
                 } catch (Exception e) {
-                    System.out.println("金额输入不合法!");
+                    System.out.println("Illegal amount.");
                     input = new Scanner(System.in);
                 }
             } else if (choose.equals("0")) {
-                this.sysAdmin = null;//退出登陆
+                this.sysAdmin = null;//exit logging
                 Main.MENU = 1;
                 break;
             } else if (choose.equals("7")) {
