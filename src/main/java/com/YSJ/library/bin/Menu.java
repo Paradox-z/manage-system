@@ -271,21 +271,21 @@ public class Menu {
             } else if (choose.equals("7")) {
                 List<RentInfo> rents = rentInfoDao.list();
                 if (rents.size() == 0) {
-                    System.out.println("没有租赁信息需要管理");
+                    System.out.println("There is no more rental information to manage.");
                 } else {
                     rents.forEach(r -> {
                         System.out.println(r);
                     });
-                    System.out.println("请输入租赁编号");
+                    System.out.println("Input rent number: ");
                 }
 
 
                 String rid = input.next();
-                //根据用户输入的租赁编号 过滤以下集合是数据 变成一个新的集合
+                //Filter the following sets of data into a new set based on the rent number entered by the user.
                 List<RentInfo> collect = rents.stream().filter(r -> r.getRid().equals(rid)).collect(Collectors.toList());
                 if (collect.size() > 0) {
                     RentInfo rentInfo = collect.get(0);
-                    SysUser user = userDao.findById(rentInfo.getUid());//获取用户对象 然后拿到该租赁用户的余额
+                    SysUser user = userDao.findById(rentInfo.getUid());//Get the user object to know the balance of this rental user.
                     try {
                         System.out.println("请输入日租金");
                         BigDecimal DailyRent = input.nextBigDecimal();
