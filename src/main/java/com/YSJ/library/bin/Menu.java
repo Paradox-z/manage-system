@@ -287,11 +287,11 @@ public class Menu {
                     RentInfo rentInfo = collect.get(0);
                     SysUser user = userDao.findById(rentInfo.getUid());//Get the user object to know the balance of this rental user.
                     try {
-                        System.out.println("请输入日租金");
+                        System.out.println("Input daily rental: ");
                         BigDecimal DailyRent = input.nextBigDecimal();
-                        System.out.println("请输入押金");
+                        System.out.println("Input deposit: ");
                         BigDecimal deposit = input.nextBigDecimal();
-                        // 余额和押金+日租金*31 比对大小
+                        //Compare balance plus deposit, and daily rental multiply 31
 
                         if (user.getAmount().compareTo(deposit.add(DailyRent.multiply(ONEMonth))) == 1) {
                             RentInfo r = new RentInfo();
@@ -299,27 +299,27 @@ public class Menu {
                             r.setPrice(DailyRent);
                             r.setDeposit(deposit);
                             r.setRid(rid);
-                            rentInfoDao.rentBook(r);//租赁成功 将租赁信息信息补充完整
-                            userDao.reduceUserAmount(deposit, user.getUid());//减少租赁用户的余额来支付押金
+                            rentInfoDao.rentBook(r);//Successfully rent, complete the rental information.
+                            userDao.reduceUserAmount(deposit, user.getUid());//deduct the balance of this user to pay deposit.
                             RechargeRecord record = new RechargeRecord();
                             record.setUid(user.getUid());
                             record.setAmount(deposit.negate());
                             record.setAid(sysAdmin.getAid());
-                            recodeDao.payDeposit(record); //生成支付押金的支付记录
-                            System.out.println("租赁成功！");
+                            recodeDao.payDeposit(record); //generate log with deposit.
+                            System.out.println("Successfully rent.");
                         } else {
-                            System.out.println("余额不足");
+                            System.out.println("Not sufficient funds.");
                         }
                     } catch (Exception e) {
                         input = new Scanner(System.in);
-                        System.out.println("输入金额不合法");
+                        System.out.println("Input amount illegal.");
                     }
                 } else {
-                    System.out.println("没有这条租赁信息");
+                    System.out.println("No rental information.");
                 }
             } else if (choose.equals("2")) {
                 List<SysAdmin> allAdmin = adminDao.findAllAdmin();
-                System.out.println("用户名\t\t真实姓名\t\t用户创建时间\t\t\t\t\t电话\t\t\t\t状态(1表示正常，0表示已注销)");
+                System.out.println("Username\t\tRealname\t\tCreatetime\t\t\t\t\tMobile\t\t\t\tState(1. Normal 0. Unsubscribed)");
                 if (allAdmin.size() > 0) {
                     for (SysAdmin admin : allAdmin) {
                         System.out.println(admin.getUsername() + "\t\t" + admin.getRealname() + "\t\t\t" + admin.getCreatetime()
