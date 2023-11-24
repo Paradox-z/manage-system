@@ -327,21 +327,21 @@ public class Menu {
                     }
                 }
 
-                System.out.println("请输入你想要的操作：");
-                System.out.println("1.删除管理员 2.添加管理员");
+                System.out.println("Tend to operation: ");
+                System.out.println("1. Unsubscribe administrator 2. Subscribe administrator");
                 String choose1 = input.next();
                 if (choose1.equals("1")) {
-                    System.out.println("请输入要删除的管理员用户名");
+                    System.out.println("Input the administratorname that you want to unsubscribe.");
                     String adminName = input.next();
                     SysAdmin admin = adminDao.getAdminByName(adminName);
                     if (admin == null) {
-                        System.out.println("用户名不存在");
+                        System.out.println("administratorname does not exist.");
                     } else {
                         boolean b = adminDao.deleteByName(adminName);
                         if (b) {
-                            System.out.println("删除成功");
+                            System.out.println("Unsubscribe done.");
                         } else {
-                            System.out.println("删除失败");
+                            System.out.println("Fail to unsubscribe.");
                         }
                     }
                 } else if (choose1.equals("2")) {
