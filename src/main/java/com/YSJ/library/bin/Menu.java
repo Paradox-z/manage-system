@@ -346,27 +346,27 @@ public class Menu {
                     }
                 } else if (choose1.equals("2")) {
                     SysAdmin admin = new SysAdmin();
-                    System.out.println("请输入用户id");
+                    System.out.println("Input your user number: ");
                     String newAdminId = input.next();
                     SysAdmin IsAdmin = adminDao.getAdminByName(newAdminId);
                     if (IsAdmin == null) {
                         admin.setAid(newAdminId);
-                        System.out.println("请输入用户名");
+                        System.out.println("Username: ");
                         admin.setUsername(input.next());
-                        System.out.println("请输入用户密码");
+                        System.out.println("Password: ");
                         admin.setPassword(input.next());
-                        System.out.println("请输入真实姓名");
+                        System.out.println("Realname: ");
                         admin.setRealname(input.next());
-                        System.out.println("请输入电话");
+                        System.out.println("Mobile: ");
                         admin.setMobile(input.next());
                         boolean b = adminDao.addAdmin(admin);
                         if (b) {
-                            System.out.println("添加成功!");
+                            System.out.println("Subscribe successfully. ");
                         } else {
-                            System.out.println("添加失败!");
+                            System.out.println("Fail to subscribe. ");
                         }
                     } else {
-                        System.out.println("添加失败！该用户已经存在！");
+                        System.out.println("Error, the user you want to subscirbe that is exist. ");
                     }
                 }
 
@@ -379,44 +379,44 @@ public class Menu {
                         System.out.println(user);
                     }
                 } else {
-                    System.out.println("还没有用户信息！");
+                    System.out.println("There is no user information. ");
                 }
 
-                System.out.println("请选择你的操作：1.添加用户  2.删除用户 3.返回上一级");
+                System.out.println(Tend to operation: 1. Subscribe account  2. Unsubscribe account 3. Turn back to the previous operation.");
                 choose1 = input.next();
                 if (choose1.equals("1")) {
 
                     SysUser sysUser = new SysUser();
-                    System.out.println("请输入用户id");
+                    System.out.println("Input your user number.");
                     String NewUserId = input.next();
                     SysUser getUser = userDao.getUserById(NewUserId);
                     if (getUser == null) {
                         sysUser.setUid(NewUserId);
-                        System.out.println("请输入用户名");
+                        System.out.println("Username: ");
                         sysUser.setUsername(input.next());
-                        System.out.println("请输入用户密码");
+                        System.out.println("Password");
                         sysUser.setPassword(input.next());
-                        System.out.println("请输入真实姓名");
+                        System.out.println("Realname: ");
                         sysUser.setRealname(input.next());
-                        System.out.println("请输入电话");
+                        System.out.println("Mobile: ");
                         sysUser.setMobile(input.next());
                         sysUser.setAmount(BigDecimal.ZERO);
                         userDao.addSysUser(sysUser);
-                        System.out.println("添加成功！");
+                        System.out.println("Subscribe successfully. ");
                     } else {
-                        System.out.println("该用户id已经存在！");
+                        System.out.println("Error, the user you want to subscirbe that is exist. ");
                     }
 
 
                 } else if (choose1.equals("2")) {
-                    System.out.println("请输入要删除的用户id");
+                    System.out.println("Input the user number of an account you want to unsubscribe: ");
                     String deleteUserId = input.next();
                     SysUser sysUser = userDao.getUserById(deleteUserId);
                     if (sysUser == null) {
-                        System.out.println("用户未找到，删除失败！");
+                        System.out.println("Can not found the account, fail to unsubscribe. ");
                     } else {
                         userDao.deleteById(deleteUserId);
-                        System.out.println("删除成功！");
+                        System.out.println("Unsubscribe successfully. ");
                     }
                 }
 
