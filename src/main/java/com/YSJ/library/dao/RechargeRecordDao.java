@@ -8,7 +8,7 @@ import java.util.List;
 
 public class RechargeRecordDao extends DataSource {
 
-    // 通过id查找借书记录
+    // Search rental book log by id.
     public List<RechargeRecord> findRecodeByUid(String uid){
         String sql="select r.*,su.username " +
                 "   from recharge_record r " +
@@ -39,7 +39,7 @@ public class RechargeRecordDao extends DataSource {
         return records;
     }
 
-    // 添加记录
+    // Add record.
     public void addRecode(RechargeRecord record){
         String sql="insert into recharge_record(rid, uid, amount, createtime, state, " +
                 "aid, remark) VALUES(uuid(),?,?,now(),?,?,null)";
@@ -53,7 +53,7 @@ public class RechargeRecordDao extends DataSource {
 
     }
 
-    // 支付押金生成记录
+    // pay deposit with generating log.
     public void payDeposit(RechargeRecord record){
         String sql="insert into recharge_record(rid, uid, amount, createtime, state, " +
                 "aid, remark) VALUES(uuid(),?,?,now(),2,?,null)";
