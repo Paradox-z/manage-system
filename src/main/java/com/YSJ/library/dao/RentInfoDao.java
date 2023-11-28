@@ -10,7 +10,7 @@ import java.util.List;
 
 public class RentInfoDao extends DataSource {
 
-    // 添加租赁信息
+    // Add rental record
     public void addRent(RentInfo rent) {
         String sql = "insert into rent_info(rid,uid,bid,createtime,endtime,state) values (uuid(),?,?,now(),DATE_ADD(NOW(), INTERVAL 1 MONTH),1)";
         try {
@@ -20,7 +20,7 @@ public class RentInfoDao extends DataSource {
         }
     }
 
-    // 列出所有租赁信息
+    // List all rental record
     public List<RentInfo> list() {
         String sql = "select r.*,su.username,bi.bookname,bi.price prices from rent_info r inner join sys_user su on r.uid = su.uid inner join books_info bi on r.bid = bi.bid where r.state=1 order by r.createtime desc";
         List<RentInfo> rents = new ArrayList<>();
@@ -33,7 +33,7 @@ public class RentInfoDao extends DataSource {
     }
 
 
-    // 设为租赁中
+    // Set the state with rent
     public void rentBook(RentInfo info) {
         String sql = "update rent_info set aid=?,price=?,deposit=?,state=2 where rid=?";
         try {
@@ -70,7 +70,7 @@ public class RentInfoDao extends DataSource {
     }
 
     /**
-     * 通过id查找正在租赁期的书
+     * Search books in renting by id.
      * @param uid
      * @return
      */
@@ -100,7 +100,7 @@ public class RentInfoDao extends DataSource {
     }
 
     /**
-     * 还书操作将借书记录中的状态设为3(已还)
+     * Return books would set the state in rental record with 3 (Already return).
      * @param rid
      * @return
      */
