@@ -9,7 +9,7 @@ import java.util.List;
 public class SysAdminDao extends DataSource {
 
     /**
-     * 登录
+     * Login
      *
      * @param name
      * @param pwd
@@ -41,7 +41,7 @@ public class SysAdminDao extends DataSource {
     }
 
     /**
-     * 查找所有管理员
+     * Find all administrators
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class SysAdminDao extends DataSource {
     }
 
     /**
-     * 通过姓名查找管理员
+     * Search for an admin by name
      *
      * @param username
      * @return
@@ -97,7 +97,7 @@ public class SysAdminDao extends DataSource {
     }
 
     /**
-     * 通过用户名删除
+     * Unsubscribe a user account by name
      *
      * @param adminName
      * @return
@@ -115,7 +115,7 @@ public class SysAdminDao extends DataSource {
     }
 
     /**
-     * 添加管理员
+     * Subscribe an admin account
      * @param admin
      * @return
      */
