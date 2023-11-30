@@ -14,7 +14,7 @@ import java.util.List;
 public class SysUserDao extends DataSource {
 
 
-    // 普通用户登录
+    // user login
     public SysUser login(String name, String pwd) {
         SysUser u = null;
         String sql = "select * from sys_user where state=1 and username=? and password=?";
@@ -36,7 +36,7 @@ public class SysUserDao extends DataSource {
         return u;
     }
 
-    // 用户列表
+    // user list
     public List<SysUser> list() {
         List<SysUser> users = new ArrayList<>();
         String sql = "select * from sys_user where state=1 order by createtime desc";
@@ -61,7 +61,7 @@ public class SysUserDao extends DataSource {
         return users;
     }
 
-    // 用户充值
+    // user recharge
     public void updateUserAmount(BigDecimal amount, String uid) {
         String sql = "update sys_user set amount=ifnull(amount,0)+? where uid=?";
         try {
@@ -73,7 +73,7 @@ public class SysUserDao extends DataSource {
         }
     }
 
-    // 用户扣费
+    // user deduction amount
     public void reduceUserAmount(BigDecimal amount, String uid) {
         String sql = "update sys_user set amount=ifnull(amount,0)-? where uid=?";
         try {
@@ -85,7 +85,7 @@ public class SysUserDao extends DataSource {
         }
     }
 
-    // 通过id查找
+    // search by id
     public SysUser findById(String id) {
         String sql = "select * from sys_user where uid=?";
         List<SysUser> users = new ArrayList<>();
@@ -98,7 +98,7 @@ public class SysUserDao extends DataSource {
     }
 
     /**
-     * 找到所有的用户
+     * find all users
      *
      * @return
      */
@@ -128,7 +128,7 @@ public class SysUserDao extends DataSource {
     }
 
     /**
-     * 通过id查找
+     * search by id
      *
      * @param Uid
      * @return
@@ -169,7 +169,7 @@ public class SysUserDao extends DataSource {
     }
 
     /**
-     * 添加用户
+     * subscribe an account
      *
      * @param sysUser
      * @return
