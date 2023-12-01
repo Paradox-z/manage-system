@@ -7,13 +7,13 @@ import java.sql.Timestamp;
 
 public class RechargeRecord {
 
-    private String rid;             //充值记录id
-    private String uid;             //用户id
-    private BigDecimal amount;      //充值金额
-    private Timestamp createtime;   //充值记录创建时间
-    private int state;              // 状态
+    private String rid;             // Recharge record
+    private String uid;             // Account number
+    private BigDecimal amount;      // Recharge amount
+    private Timestamp createtime;   // Recharge record created time
+    private int state;              // State
     private String aid;
-    private String remark;          // 备注
+    private String remark;          // Note
 
     @UnExists
     private String username;
