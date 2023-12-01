@@ -10,13 +10,13 @@ public class RentInfo {
     private String uid;
     private String bid;
     private String aid;
-    private Timestamp createtime;//'租赁时间',
-    private BigDecimal price;//'日租金',
-    private BigDecimal deposit;//'押金',
-    private Timestamp endtime;//'还书时间',
-    private BigDecimal amount;//'总租金',
-    private String remark;//comment '备注',
-    private int state;// comment '0 作废 1 申请租书 2 租赁中 3 已还'
+    private Timestamp createtime;    // rent created time
+    private BigDecimal price;        // daily rental
+    private BigDecimal deposit;      // deposit
+    private Timestamp endtime;       // return time
+    private BigDecimal amount;       // total rental
+    private String remark;           // comment
+    private int state;               // state, 0-waste, 1-apply to rent books, 2-borrowing, 3-returned.
 
     @UnExists
     private String username;
