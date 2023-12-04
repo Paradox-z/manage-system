@@ -5,14 +5,14 @@ drop table if exists sys_user;
 
 drop table if exists sys_admin;
 create table sys_admin (
-       aid varchar(50) primary key comment '管理员编号',
-       username varchar(50) comment '账号',
-       password varchar(255) comment '密码',
-       realname varchar(50) comment '姓名',
-       createtime datetime comment '创建时间',
-       state int comment '状态 0 注销 1 正常',
-       mobile varchar(50) comment '手机号'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统管理员表';
+       aid varchar(50) primary key comment 'admin number',
+       username varchar(50) comment 'account',
+       password varchar(255) comment 'password',
+       realname varchar(50) comment 'name',
+       createtime datetime comment 'create time',
+       state int comment 'status 0-unsubscribe 1-normal',
+       mobile varchar(50) comment 'mobile phone'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin list';
 
 create table sys_user (
           uid varchar(50) primary key comment '用户编号',
