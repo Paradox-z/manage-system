@@ -15,17 +15,17 @@ create table sys_admin (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin list';
 
 create table sys_user (
-          uid varchar(50) primary key comment '用户编号',
-          username varchar(50) comment '账号',
-          password varchar(255) comment '密码',
-          realname varchar(50) comment '姓名',
-          createtime datetime comment '创建时间',
-          state int comment '状态 0 注销 1 正常',
-          mobile varchar(50) comment '手机号',
-          amount decimal(18,2) comment '余额'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统用户表';
-#alter table sys_user add mobile varchar(50) comment '手机号';
-#alter table sys_user add amount decimal(18,2) comment '余额';
+          uid varchar(50) primary key comment 'user number',
+          username varchar(50) comment 'acount',
+          password varchar(255) comment 'password',
+          realname varchar(50) comment 'name',
+          createtime datetime comment 'create time',
+          state int comment 'status 0-unsubscribe 1-normal',
+          mobile varchar(50) comment 'mobile phone',
+          amount decimal(18,2) comment 'balance'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin list';
+#alter table sys_user add mobile varchar(50) comment 'Phone';
+#alter table sys_user add amount decimal(18,2) comment 'Balance';
 ALTER TABLE recharge_record
     ADD CONSTRAINT fk_recharge_record_sys_user_uid
         FOREIGN KEY (uid) REFERENCES sys_user(uid);
