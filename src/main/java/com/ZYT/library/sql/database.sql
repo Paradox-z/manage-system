@@ -33,12 +33,12 @@ drop table if exists recharge_record;
 create table recharge_record(
         rid varchar(50) primary key,
         uid varchar(50),
-        amount decimal(18,2) comment '金额',
-        createtime datetime comment '创建时间',
-        state int comment '状态 -1退费 0 作废 1 充值 2 押金 3 租金 4 退押金',
-        aid varchar(50) comment '充值人',
-        remark varchar(255) comment '备注'
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='消费记录表';
+        amount decimal(18,2) comment 'amounts',
+        createtime datetime comment 'create time',
+        state int comment 'status -1:chargeback 0:unsubscribe 1:recharge 2:deposit 3:rental 4:refund deposit',
+        aid varchar(50) comment 'recharger',
+        remark varchar(255) comment 'comment'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='consumption record sheet';
 
 drop table if exists books_info;
 create table books_info(
