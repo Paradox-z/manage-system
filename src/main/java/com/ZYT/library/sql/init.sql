@@ -1,12 +1,12 @@
-/*用户数据*/
+/*account data*/
 insert into sys_admin(aid, username, password, realname, createtime, state, mobile)
-VALUES (uuid(), 'admin', md5('123'), '张三', now(), 1, '18676543647');
+VALUES (uuid(), 'admin', md5('123'), '张三', now(), 1, '18676663333');
 delete
 from sys_admin
 where username = 'zhangsan';
 INSERT INTO sys_user (uid, username, password, realname, createtime, state, mobile, amount)
-VALUES (uuid(), 'zhangsan', md5('123'), '张宇涛', NOW(), 1, '18255871722', 999999999.0);
-# 图书信息表创建
+VALUES (uuid(), 'zhangsan', md5('123'), 'ZYT', NOW(), 1, '18255551777', 999999999.0);
+# book information list created
 INSERT INTO books_info(bid, bookname, price, description, author, createtime, state)
 VALUES ('001', 'Java编程思想', 78.00, '介绍Java编程的经典著作', 'Bruce Eckel', '2021-01-05 09:00:00', 1),
        ('002', '计算机网络', 48.90, '介绍计算机网络的基本概念和原理', '谢希仁', '2021-02-02 10:00:00', 1),
