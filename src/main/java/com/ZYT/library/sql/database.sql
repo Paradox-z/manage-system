@@ -10,9 +10,9 @@ create table sys_admin (
        password varchar(255) comment 'password',
        realname varchar(50) comment 'name',
        createtime datetime comment 'create time',
-       state int comment 'status 0-unsubscribe 1-normal',
+       state int comment 'status 0:unsubscribe 1:normal',
        mobile varchar(50) comment 'mobile phone'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin list';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin sheet';
 
 create table sys_user (
           uid varchar(50) primary key comment 'user number',
@@ -23,7 +23,7 @@ create table sys_user (
           state int comment 'status 0-unsubscribe 1-normal',
           mobile varchar(50) comment 'mobile phone',
           amount decimal(18,2) comment 'balance'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin list';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin sheet';
 #alter table sys_user add mobile varchar(50) comment 'Phone';
 #alter table sys_user add amount decimal(18,2) comment 'Balance';
 ALTER TABLE recharge_record
@@ -43,13 +43,13 @@ create table recharge_record(
 drop table if exists books_info;
 create table books_info(
                            bid varchar(50) primary key,
-                           bookname varchar(50) comment '书名',
-                           price decimal(18,2) comment '售价',
-                           description varchar(255) comment '简介',
-                           author varchar(50) comment '作者',
-                           createtime datetime comment '创建时间',
-                           state int comment '状态 0 作废 1 正常'
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='图书信息表';
+                           bookname varchar(50) comment 'book name',
+                           price decimal(18,2) comment 'price',
+                           description varchar(255) comment 'presentation',
+                           author varchar(50) comment 'author',
+                           createtime datetime comment 'create time',
+                           state int comment 'Status 0:unsubscribe 1:formal'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='book information sheet';
 
 drop table if exists rent_info;
 create table rent_info(
