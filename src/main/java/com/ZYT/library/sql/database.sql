@@ -57,12 +57,12 @@ create table rent_info(
        uid varchar(50),
        bid varchar(50),
        aid varchar(50),
-       createtime datetime comment '租赁时间',
-       price decimal(18,2) comment '日租金',
-       deposit decimal(18,2) comment '押金',
-       endtime datetime comment '还书时间',
-       amount decimal(18,2) comment '总租金',
-       remark varchar(255) comment '备注',
+       createtime datetime comment 'rental time',
+       price decimal(18,2) comment 'daily rental',
+       deposit decimal(18,2) comment 'down payment',
+       endtime datetime comment 'return time',
+       amount decimal(18,2) comment 'total rental',
+       remark varchar(255) comment 'comment',
        state int comment '0 作废 1 申请租书 2 租赁中 3 已还'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='租赁信息表';
 
