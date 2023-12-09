@@ -10,7 +10,7 @@ create table sys_admin (
        password varchar(255) comment 'password',
        realname varchar(50) comment 'name',
        createtime datetime comment 'create time',
-       state int comment 'status 0:unsubscribe 1:normal',
+       state int comment 'State 0:unsubscribe 1:normal',
        mobile varchar(50) comment 'mobile phone'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin sheet';
 
@@ -20,7 +20,7 @@ create table sys_user (
           password varchar(255) comment 'password',
           realname varchar(50) comment 'name',
           createtime datetime comment 'create time',
-          state int comment 'status 0-unsubscribe 1-normal',
+          state int comment 'State 0:unsubscribe 1:normal',
           mobile varchar(50) comment 'mobile phone',
           amount decimal(18,2) comment 'balance'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='system admin sheet';
@@ -35,7 +35,7 @@ create table recharge_record(
         uid varchar(50),
         amount decimal(18,2) comment 'amounts',
         createtime datetime comment 'create time',
-        state int comment 'status -1:chargeback 0:unsubscribe 1:recharge 2:deposit 3:rental 4:refund deposit',
+        state int comment 'State -1:chargeback 0:unsubscribe 1:recharge 2:deposit 3:rental 4:refund deposit',
         aid varchar(50) comment 'recharger',
         remark varchar(255) comment 'comment'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='consumption record sheet';
@@ -48,7 +48,7 @@ create table books_info(
                            description varchar(255) comment 'presentation',
                            author varchar(50) comment 'author',
                            createtime datetime comment 'create time',
-                           state int comment 'Status 0:unsubscribe 1:formal'
+                           state int comment 'State 0:unsubscribe 1:formal'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='book information sheet';
 
 drop table if exists rent_info;
