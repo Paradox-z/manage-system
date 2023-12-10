@@ -49,7 +49,7 @@ create table books_info(
                            author varchar(50) comment 'author',
                            createtime datetime comment 'create time',
                            state int comment 'State 0:unsubscribe 1:formal'
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='book information sheet';
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='books information sheet';
 
 drop table if exists rent_info;
 create table rent_info(
@@ -63,7 +63,7 @@ create table rent_info(
        endtime datetime comment 'return time',
        amount decimal(18,2) comment 'total rental',
        remark varchar(255) comment 'comment',
-       state int comment '0 作废 1 申请租书 2 租赁中 3 已还'
-)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='租赁信息表';
+       state int comment 'State 0:unsubscribe 1:rent books application 2:under lease 3:returned'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='rental information sheet';
 
 
