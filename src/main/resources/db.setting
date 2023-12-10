@@ -2,7 +2,7 @@
 
 url = jdbc:mysql://localhost:3306/hubue?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
 user = root
-pass = 1234
+pass = 123456
 
 ## Optional configuration
 # whether or not to show executing SQL in .log
