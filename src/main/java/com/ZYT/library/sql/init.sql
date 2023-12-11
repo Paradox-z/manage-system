@@ -1,6 +1,6 @@
 /*account data*/
 insert into sys_admin(aid, username, password, realname, createtime, state, mobile)
-VALUES (uuid(), 'admin', md5('123'), '张三', now(), 1, '18676663333');
+VALUES (uuid(), 'admin', md5('123'), 'zhangsan', now(), 1, '18676663333');
 delete
 from sys_admin
 where username = 'zhangsan';
