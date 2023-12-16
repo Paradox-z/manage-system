@@ -9,7 +9,7 @@ import java.util.List;
 
 public class BooksInfoDao {
 
-    // Inserting Book information
+    // Inserting Book information into list.
     public void insert(BooksInfo book){
         String sql="insert into books_info(bid, bookname, price, description, author, createtime, state)" +
                 " values (uuid(),?,?,?,?,now(),1)";
