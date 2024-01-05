@@ -1,0 +1,15 @@
+## db.setting document
+
+url = jdbc:mysql://localhost:3306/hubue?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+user = root
+pass = 123456
+
+## Optional configuration
+# whether or not to show executing SQL in .log
+showSql = true
+# whether or not to format the output SQL
+formatSql = false
+# whether or not to show SQL parameters
+showParams = true
+# Print the log level of SQL. The default is debug, and it can be info, warn, or error.
+sqlLevel = debug
