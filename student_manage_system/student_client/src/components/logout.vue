@@ -1,11 +1,11 @@
 <template>
   <div>
       <el-popconfirm
-          confirm-button-text='好的'
-          cancel-button-text='不用了'
+          confirm-button-text='Yes'
+          cancel-button-text='No'
           icon="el-icon-info"
           icon-color="red"
-          title="确定退出登陆吗？"
+          title="Confirm to log out?"
           @confirm="out"
       >
         <el-button slot="reference" type="danger" style="margin-top: 10px" round @click>
