@@ -1,9 +1,9 @@
 <template>
   <el-card>
-    <el-descriptions title="用户信息">
-      <el-descriptions-item label="用户 id">{{ id }}</el-descriptions-item>
-      <el-descriptions-item label="用户名">{{ name }}</el-descriptions-item>
-      <el-descriptions-item label="用户类型">
+    <el-descriptions title="User Information">
+      <el-descriptions-item label="User ID">{{ id }}</el-descriptions-item>
+      <el-descriptions-item label="Username">{{ name }}</el-descriptions-item>
+      <el-descriptions-item label="User Type">
         <el-tag size="small">{{ type }}</el-tag>
       </el-descriptions-item>
     </el-descriptions>
