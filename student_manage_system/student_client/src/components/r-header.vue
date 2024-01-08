@@ -3,7 +3,7 @@
 
     <img style="float:left" src="../assets/logo.png" alt="" height="50px" />
     <span style=" font-size: 20px;float:left;color: #fff">
-      学生管理系统
+      Student Administration System
     </span>
 
       <el-divider direction="vertical" style="color: #fff"></el-divider>
