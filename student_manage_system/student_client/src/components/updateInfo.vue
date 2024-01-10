@@ -57,7 +57,7 @@ export default {
           { validator: validatePass2, trigger: 'blur' }
         ],
         name: [
-          { require: true, message: '名字不能为空', trigger: 'blur'}
+          { require: true, message: 'Name not null', trigger: 'blur'}
         ]
       }
     };
@@ -92,12 +92,12 @@ export default {
             if (resp.data === true) {
               that.$message({
                 showClose: true,
-                message: '编辑成功',
+                message: 'Modified successfully',
                 type: 'success'
               });
             }
             else {
-              that.$message.error('编辑失败，联系管理员');
+              that.$message.error('Fail to modify, ask admin for help');
             }
             that.$router.push("/" + type + 'Home')
           })
