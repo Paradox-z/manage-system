@@ -43,20 +43,20 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    // 首页
+    // front page
     path: '/',
     name: 'index',
     component: login,
     redirect: '/login'
   },
   {
-    // 登陆页
+    // login page
     path: '/login',
     name: 'login',
     component: login
   },
   {
-    // admin 的路由
+    // admin router
     path: '/admin',
     name: 'admin',
     redirect: '/studentList',
@@ -65,7 +65,7 @@ const routes = [
     children: [
       {
         path: '/studentManage',
-        name: '学生管理',
+        name: 'Student Administration',
         component: studentManage,
         meta: {requireAuth: true},
         children: [
