@@ -71,25 +71,25 @@ const routes = [
         children: [
           {
             path: '/addStudent',
-            name: '添加学生',
+            name: 'Add Students',
             component: addStudent,
             meta: {requireAuth: true}
           },
           {
             path: '/studentList',
-            name: '学生列表',
+            name: 'Student List',
             component: studentList,
             meta: {requireAuth: true},
           },
           {
             path: '/editorStudent',
-            name: '编辑学生',
+            name: 'Edit Student Information',
             component: editorStudent,
             meta: {requireAuth: true}
           },
           {
             path: '/queryStudent',
-            name: '搜索',
+            name: 'Search Students',
             component: queryStudent,
             meta: {requireAuth: true},
             children: [
