@@ -71,7 +71,7 @@ const routes = [
         children: [
           {
             path: '/addStudent',
-            name: 'Add Students',
+            name: 'Add students',
             component: addStudent,
             meta: {requireAuth: true}
           },
@@ -83,7 +83,7 @@ const routes = [
           },
           {
             path: '/editorStudent',
-            name: 'Edit Student Information',
+            name: 'Edit students information',
             component: editorStudent,
             meta: {requireAuth: true}
           },
@@ -104,13 +104,13 @@ const routes = [
       },
       {
         path: '/teacherManage',
-        name: '教师管理',
+        name: 'Teacher Management',
         component: teacherManage,
         meta: {requireAuth: true},
         children: [
           {
             path: '/addTeacher',
-            name: '添加教师',
+            name: 'Add teachers',
             component: addTeacher,
             meta: {requireAuth: true}
           },
@@ -124,7 +124,7 @@ const routes = [
           },
           {
             path: '/editorTeacher',
-            name: '编辑教师',
+            name: 'Edit teachers information',
             component: editorTeacher,
             meta: {requireAuth: true}
           },
