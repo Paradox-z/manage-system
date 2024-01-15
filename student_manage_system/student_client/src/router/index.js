@@ -83,7 +83,7 @@ const routes = [
           },
           {
             path: '/editorStudent',
-            name: 'Edit students information',
+            name: 'Edit students' information',
             component: editorStudent,
             meta: {requireAuth: true}
           },
@@ -116,7 +116,7 @@ const routes = [
           },
           {
             path: '/queryTeacher',
-            name: '教师列表',
+            name: 'Teacher List',
             component: queryTeacher,
             meta: {requireAuth: true},
             children: [
@@ -124,7 +124,7 @@ const routes = [
           },
           {
             path: '/editorTeacher',
-            name: 'Edit teachers information',
+            name: 'Edit teachers' information',
             component: editorTeacher,
             meta: {requireAuth: true}
           },
@@ -132,25 +132,25 @@ const routes = [
       },
       {
         path: '/courseManage',
-        name: '课程管理',
+        name: 'Course Management',
         component: courseManage,
         meta: {requireAuth: true},
         children: [
           {
             path: '/addCourse',
-            name: '添加课程',
+            name: 'Add courses',
             component: addCourse,
             meta: {requireAuth: true}
           },
           {
             path: '/queryCourse',
-            name: '搜索课程',
+            name: 'Search courses',
             component: queryCourse,
             meta: {requireAuth: true},
             children: [
               {
                 path: '/courseList',
-                name: '课程列表',
+                name: 'Course List',
                 component: courseList,
                 meta: {requireAuth: true}
               },
@@ -158,7 +158,7 @@ const routes = [
           },
           {
             path: '/editorCourse',
-            name: '编辑课程',
+            name: 'Edit courses' information',
             component: editorCourse,
             meta: {requireAuth: true}
           },
