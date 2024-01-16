@@ -223,19 +223,19 @@ const routes = [
       },
       {
         path: '/courseManage',
-        name: '课程设置',
+        name: 'Course configuration',
         meta: {requireAuth: true},
         component: setCourse,
         children: [
           {
             path: '/myOfferCourse',
-            name: '我开设的课程',
+            name: 'Opened courses',
             component: myOfferCourse,
             meta: {requireAuth: true}
           },
           {
             path: '/offerCourse',
-            name: '开设课程',
+            name: 'Opened courses',
             component: offerCourse,
             meta: {requireAuth: true}
           },
