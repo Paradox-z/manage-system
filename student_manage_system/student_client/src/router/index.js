@@ -242,20 +242,20 @@ const routes = [
         ]
       },
       {
-        name: '教师成绩管理',
+        name: 'Grade edited by teacher',
         path: '/teacherQueryGradeCourseManage',
         component: teacherGradeCourseManage,
         meta: {requireAuth: true},
         children: [
           {
             path: '/teacherQueryGradeCourseManage',
-            name: '成绩管理',
+            name: 'Grade management',
             component: teacherQueryGradeCourse,
             meta: {requireAuth: true}
           },
           {
             path: '/teacherEditorGradeCourse',
-            name: '编辑成绩',
+            name: 'Grade edited by teacher',
             component: teacherEditorGradeCourse,
             meta: {requireAuth: true}
           }
@@ -273,13 +273,13 @@ const routes = [
 
       {
         path: '/updateInfo',
-        name: '学生编辑',
+        name: 'Student update information',
         component: updateInfo,
         meta: {requireAuth: true},
         children: [
           {
             path: '/updateInfoHome',
-            name: '编辑学生信息',
+            name: 'Update student information',
             component: updateInfo,
             meta: {requireAuth: true}
           }
