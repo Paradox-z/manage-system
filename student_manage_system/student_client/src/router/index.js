@@ -287,19 +287,19 @@ const routes = [
       },
       {
         path: '/studentSelectCourseManage',
-        name: '选课管理',
+        name: 'Select course administration',
         component: studentSelectCourseManage,
         meta: {requireAuth: true},
         children: [
           {
             path: '/studentSelectCourse',
-            name: '选课',
+            name: 'Select course',
             component: selectCourse,
             meta: {requireAuth: true}
           },
           {
             path: '/querySelectedCourse',
-            name: '查询课表',
+            name: 'Query selected course',
             component: querySelectedCourse,
             meta: {requireAuth: true}
           }
