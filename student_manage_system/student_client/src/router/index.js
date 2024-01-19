@@ -307,13 +307,13 @@ const routes = [
       },
       {
         path: '/courseGrade',
-        name: '学生成绩管理',
+        name: 'Student grade administration',
         component: studentCourseGrade,
         meta: {requireAuth: true},
         children: [
           {
             path: '/queryCourseGrade',
-            name: '成绩查询',
+            name: 'Query course grade',
             component: queryCourseGrade,
             meta: {requireAuth: true}
           },
