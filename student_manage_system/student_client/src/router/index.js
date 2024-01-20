@@ -332,13 +332,13 @@ const router = new VueRouter({
 export default router
 
 /*
-  session 设置：
+  session Configuration：
     1. token
     2. name
     3. type
     4. tid
     5. sid
-    5. 系统信息 info
+    5. System Information info
  */
 router.beforeEach((to, from, next) => {
   console.log(from.path + ' ====> ' + to.path)
