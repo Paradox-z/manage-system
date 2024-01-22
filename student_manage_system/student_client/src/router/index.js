@@ -342,7 +342,7 @@ export default router
  */
 router.beforeEach((to, from, next) => {
   console.log(from.path + ' ====> ' + to.path)
-  if (to.meta.requireAuth) { // 判断该路由是否需要登录权限
+  if (to.meta.requireAuth) { // Confirm that if this router need login accessibility
     if (sessionStorage.getItem("token") === 'true') { // 判断本地是否存在token
       next()
     } else {
