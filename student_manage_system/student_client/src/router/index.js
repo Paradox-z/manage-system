@@ -343,7 +343,7 @@ export default router
 router.beforeEach((to, from, next) => {
   console.log(from.path + ' ====> ' + to.path)
   if (to.meta.requireAuth) { // Confirm that if this router need login accessibility
-    if (sessionStorage.getItem("token") === 'true') { // 判断本地是否存在token
+    if (sessionStorage.getItem("token") === 'true') { // Certify that if there is a token in local.
       next()
     } else {
       // 未登录,跳转到登陆页面
