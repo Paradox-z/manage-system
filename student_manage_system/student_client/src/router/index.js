@@ -346,7 +346,7 @@ router.beforeEach((to, from, next) => {
     if (sessionStorage.getItem("token") === 'true') { // Certify that if there is a token in local.
       next()
     } else {
-      // 未登录,跳转到登陆页面
+      // Requires login, return to login page.
       next({
         path: '/login',
         query: {redirect: to.fullPath}
