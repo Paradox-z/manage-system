@@ -353,9 +353,9 @@ router.beforeEach((to, from, next) => {
       })
     }
   } else {
-    // 不需要登陆权限的页面，如果已经登陆，则跳转主页面
+    // Prefer no login, if you've logined, there'll turn to the first page.
     if(sessionStorage.getItem("token") === 'true'){
-      console.log('检查拦截器配置，大概率出现漏网之鱼')
+      console.log('Check configuration of Blocker')
       const t = sessionStorage.getItem("type")
       next('/' + t);
     }else{
