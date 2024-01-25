@@ -340,6 +340,7 @@ export default router
     5. sid
     5. System Information info
  */
+
 router.beforeEach((to, from, next) => {
   console.log(from.path + ' ====> ' + to.path)
   if (to.meta.requireAuth) { // Confirm that if this router need login accessibility
