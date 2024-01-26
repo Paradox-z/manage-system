@@ -1,15 +1,15 @@
 <template>
   <div>
     <el-form style="width: 60%" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="课程名" prop="cname">
+      <el-form-item label="Course name" prop="cname">
         <el-input v-model="ruleForm.cname"></el-input>
       </el-form-item>
-      <el-form-item label="学分" prop="ccredit">
+      <el-form-item label="Credit" prop="ccredit">
         <el-input v-model.number="ruleForm.ccredit"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-        <el-button @click="resetForm('ruleForm')">重置</el-button>
+        <el-button type="primary" @click="submitForm('ruleForm')">Commit</el-button>
+        <el-button @click="resetForm('ruleForm')">Reset</el-button>
         <el-button @click="test">test</el-button>
       </el-form-item>
     </el-form>
