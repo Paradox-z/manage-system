@@ -25,7 +25,7 @@ export default {
       },
       rules: {
         cname: [
-          { required: true, message: '请输入名称', trigger: 'blur' },
+          { required: true, message: 'Please enter your name: ', trigger: 'blur' },
         ],
         ccredit: [
           { required: true, message: '请输入学分', trigger: 'change' },
