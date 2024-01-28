@@ -25,11 +25,11 @@ export default {
       },
       rules: {
         cname: [
-          { required: true, message: 'Please enter your name: ', trigger: 'blur' },
+          { required: true, message: 'Please enter a course-name: ', trigger: 'blur' },
         ],
         ccredit: [
-          { required: true, message: '请输入学分', trigger: 'change' },
-          { type: 'number', message: '请输入数字', trigger: 'blur' },
+          { required: true, message: 'Please enter the credit: ', trigger: 'change' },
+          { type: 'number', message: 'Please enter an identified number: ', trigger: 'blur' },
         ],
       }
     };
