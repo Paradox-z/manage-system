@@ -8,26 +8,26 @@
       <el-table-column
           fixed
           prop="cid"
-          label="课程号"
+          label="Course number"
           width="150">
       </el-table-column>
       <el-table-column
           prop="cname"
-          label="课程名"
+          label="Course name"
           width="150">
       </el-table-column>
       <el-table-column
           prop="ccredit"
-          label="学分"
+          label="Course credit"
           width="150">
       </el-table-column>
       <el-table-column
-          label="操作"
+          label="Operation"
           width="100">
         <template slot-scope="scope">
           <el-popconfirm
-              confirm-button-text='删除'
-              cancel-button-text='取消'
+              confirm-button-text='Delete'
+              cancel-button-text='Cancel'
               icon="el-icon-info"
               icon-color="red"
               title="删除不可复原"
