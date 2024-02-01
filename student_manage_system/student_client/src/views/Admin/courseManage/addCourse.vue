@@ -52,7 +52,7 @@ export default {
               });
             }
             else {
-              that.$message.error('插入失败，请检查数据库t');
+              that.$message.error('Fail to insert, please check the linked database./t');
             }
             that.$router.push("/queryCourse")
           })
