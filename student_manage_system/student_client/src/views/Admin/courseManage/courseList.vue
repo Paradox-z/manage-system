@@ -71,7 +71,7 @@ export default {
         else {
           that.$message({
             showClose: true,
-            message: '删除出错，请查询数据库连接',
+            message: 'Fail to delete, please check the link with database.',
             type: 'error'
           });
         }
