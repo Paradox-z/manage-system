@@ -93,7 +93,7 @@ export default {
         if (resp.data === true) {
           that.$message({
             showClose: true,
-            message: '开设成功',
+            message: 'A new course has been successfully launched.',
             type: 'success'
           });
           window.location.reload()
