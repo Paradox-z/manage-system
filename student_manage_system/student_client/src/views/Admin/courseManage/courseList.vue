@@ -78,7 +78,7 @@ export default {
       }).catch(function (error) {
         that.$message({
           showClose: true,
-          message: 'Opps, there is foreign key dependency cause deleted unsuccessfully.',
+          message: 'Opps, there is a foreign key dependency cause deleted unsuccessfully.',
           type: 'error'
         });
       })
