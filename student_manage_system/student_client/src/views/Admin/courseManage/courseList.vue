@@ -101,7 +101,7 @@ export default {
         else {
           that.$message({
             showClose: true,
-            message: '开设失败，请联系管理员',
+            message: 'There is an error in the course launch, please contact the admin.',
             type: 'error'
           });
         }
