@@ -152,7 +152,7 @@ export default {
         that.total = null
         that.tableData = null
         axios.post("http://localhost:10086/course/findBySearch", newRuleForm).then(function (resp) {
-          console.log("查询结果:");
+          console.log("Results in accordance with the requests made:");
           console.log(resp)
           that.tmpList = resp.data
           that.total = resp.data.length
