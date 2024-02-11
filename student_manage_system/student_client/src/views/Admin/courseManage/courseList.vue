@@ -145,7 +145,7 @@ export default {
   watch: {
     ruleForm: {
       handler(newRuleForm, oldRuleForm) {
-        console.log("Rule monitor form")
+        console.log("Rule monitor")
         console.log(newRuleForm)
         const that = this
         that.tmpList = null
