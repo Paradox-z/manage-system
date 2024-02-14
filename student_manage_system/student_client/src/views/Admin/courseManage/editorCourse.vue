@@ -4,7 +4,7 @@
       <el-form-item label="Course name" prop="cname">
         <el-input v-model="ruleForm.cname" :value="ruleForm.cname"></el-input>
       </el-form-item>
-      <el-form-item label="学分" prop="ccredit">
+      <el-form-item label="Credit" prop="ccredit">
         <el-input v-model.number="ruleForm.ccredit" :value="ruleForm.ccredit"></el-input>
       </el-form-item>
       <el-form-item>
