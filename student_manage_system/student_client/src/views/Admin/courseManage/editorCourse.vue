@@ -29,8 +29,8 @@ export default {
           { required: true, message: 'Input a course name: ', trigger: 'blur' },
         ],
         ccredit: [
-          { required: true, message: '请输入学分', trigger: 'change' },
-          { type: 'number', message: '请输入数字', trigger: 'change'},
+          { required: true, message: 'Input the course credit: ', trigger: 'change' },
+          { type: 'number', message: 'Input the course number: ', trigger: 'change'},
         ],
       }
     };
