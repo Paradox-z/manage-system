@@ -52,7 +52,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          // 通过前端校验
+          // To certify this program in front end.
           const that = this
           console.log(this.ruleForm)
           axios.post("http://localhost:10086/course/updateCourse", this.ruleForm).then(function (resp) {
