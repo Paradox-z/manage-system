@@ -64,7 +64,7 @@ export default {
               });
             }
             else {
-              that.$message.error('编辑失败，请检查数据库');
+              that.$message.error('Fail to edit, check the database please.');
             }
             that.$router.push("/queryCourse")
           })
