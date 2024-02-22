@@ -10,7 +10,7 @@
             <el-form-item label="Course name" prop="cname">
               <el-input v-model="ruleForm.cname"></el-input>
             </el-form-item>
-            <el-form-item label="模糊查询" prop="fuzzy">
+            <el-form-item label="Fuzzy query" prop="fuzzy">
               <el-switch v-model="ruleForm.fuzzy"></el-switch>
             </el-form-item>
             <el-form-item label="学分下限" prop="lowBound">
