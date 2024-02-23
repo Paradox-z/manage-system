@@ -16,7 +16,7 @@
             <el-form-item label="Minimum number of credits allowed" prop="lowBound">
               <el-input v-model.number="ruleForm.lowBound"></el-input>
             </el-form-item>
-            <el-form-item label="the top of course credit limitation" prop="highBound">
+            <el-form-item label="Maximum number of credits allowed" prop="highBound">
               <el-input v-model.number="ruleForm.highBound"></el-input>
             </el-form-item>
             <el-form-item>
