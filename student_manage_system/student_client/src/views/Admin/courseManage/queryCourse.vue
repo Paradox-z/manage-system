@@ -20,7 +20,7 @@
               <el-input v-model.number="ruleForm.highBound"></el-input>
             </el-form-item>
             <el-form-item>
-              <el-button type="primary" @click="resetForm('ruleForm')">重置</el-button>
+              <el-button type="primary" @click="resetForm('ruleForm')">Reset</el-button>
             </el-form-item>
           </el-form>
         </el-card>
@@ -46,15 +46,15 @@ export default {
       },
       rules: {
         cid: [
-          { type: 'number', message: '必须是数字类型' }
+          { type: 'number', message: 'This type must be numeric.' }
         ],
         cname: [
         ],
         lowBound: [
-          { type: 'number', message: '必须是数字类型' }
+          { type: 'number', message: 'This type must be numeric.' }
         ],
         highBound: [
-          { type: 'number', message: '必须是数字类型' }
+          { type: 'number', message: 'This type must be numeric.' }
         ],
       }
     };
