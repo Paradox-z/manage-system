@@ -13,10 +13,10 @@
             <el-form-item label="Fuzzy query" prop="fuzzy">
               <el-switch v-model="ruleForm.fuzzy"></el-switch>
             </el-form-item>
-            <el-form-item label="学分下限" prop="lowBound">
+            <el-form-item label="Minimum number of credits allowed" prop="lowBound">
               <el-input v-model.number="ruleForm.lowBound"></el-input>
             </el-form-item>
-            <el-form-item label="学分上限" prop="highBound">
+            <el-form-item label="the top of course credit limitation" prop="highBound">
               <el-input v-model.number="ruleForm.highBound"></el-input>
             </el-form-item>
             <el-form-item>
