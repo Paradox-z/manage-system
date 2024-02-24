@@ -2,7 +2,7 @@
   <div>
     <el-card>
       <el-form style="width: 60%" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-        <el-form-item label="课程名称" prop="cname">
+        <el-form-item label="Course name" prop="cname">
           <el-input v-model="ruleForm.cname" :value="ruleForm.cname" :disabled="true"></el-input>
         </el-form-item>
         <el-form-item label="教师名" prop="tname">
