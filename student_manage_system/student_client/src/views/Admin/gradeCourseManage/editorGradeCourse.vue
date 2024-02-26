@@ -8,10 +8,10 @@
         <el-form-item label="Teacher name" prop="tname">
           <el-input v-model="ruleForm.tname" :value="ruleForm.tname" :disabled="true"></el-input>
         </el-form-item>
-        <el-form-item label="学生名" prop="sname">
+        <el-form-item label="Student name" prop="sname">
           <el-input v-model="ruleForm.sname" :value="ruleForm.sname" :disabled="true"></el-input>
         </el-form-item>
-        <el-form-item label="分数" prop="grade">
+        <el-form-item label="Grade" prop="grade">
           <el-input v-model.number="ruleForm.grade" :value="ruleForm.grade"></el-input>
         </el-form-item>
         <el-form-item>
