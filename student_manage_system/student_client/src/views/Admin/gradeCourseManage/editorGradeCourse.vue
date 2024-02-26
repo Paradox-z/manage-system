@@ -5,7 +5,7 @@
         <el-form-item label="Course name" prop="cname">
           <el-input v-model="ruleForm.cname" :value="ruleForm.cname" :disabled="true"></el-input>
         </el-form-item>
-        <el-form-item label="教师名" prop="tname">
+        <el-form-item label="Teacher name" prop="tname">
           <el-input v-model="ruleForm.tname" :value="ruleForm.tname" :disabled="true"></el-input>
         </el-form-item>
         <el-form-item label="学生名" prop="sname">
