@@ -28,10 +28,10 @@ export default {
   data() {
     var checkGrade = (rule, value, callback) => {
       if (!value) {
-        return callback(new Error('成绩不能为空'));
+        return callback(new Error('The grade column cannot be null.'));
       }
       if (!Number.isInteger(value)) {
-        callback(new Error('请输入数字值'));
+        callback(new Error('Enter a number please.'));
       } else {
         if (value > 100 || value < 0) {
           callback(new Error('成绩范围 [0 - 100]'));
