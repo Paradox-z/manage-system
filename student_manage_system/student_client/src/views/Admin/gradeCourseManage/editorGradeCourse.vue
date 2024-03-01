@@ -34,7 +34,7 @@ export default {
         callback(new Error('Enter a number please.'));
       } else {
         if (value > 100 || value < 0) {
-          callback(new Error('成绩范围 [0 - 100]'));
+          callback(new Error('the range of grades [0 - 100]'));
         } else {
           callback();
         }
