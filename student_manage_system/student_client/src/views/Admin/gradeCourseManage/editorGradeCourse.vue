@@ -53,7 +53,7 @@ export default {
       rules: {
         grade: [
           { required: true, message: 'Credit:', trigger: 'change'},
-          { type: 'number', message: '请输入数字', trigger: 'change'},
+          { type: 'number', message: 'Number:', trigger: 'change'},
           { validator: checkGrade, trigger: 'blur'}
         ],
       }
