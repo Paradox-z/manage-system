@@ -88,7 +88,7 @@ export default {
             if (resp.data === true) {
               that.$message({
                 showClose: true,
-                message: '编辑成功',
+                message: 'Edit successfully.',
                 type: 'success'
               });
             }
