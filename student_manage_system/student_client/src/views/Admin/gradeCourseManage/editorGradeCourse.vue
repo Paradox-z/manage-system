@@ -93,7 +93,7 @@ export default {
               });
             }
             else {
-              that.$message.error('编辑失败，请检查数据库');
+              that.$message.error('Fail to edit, better check the connection with the database.');
             }
             if (sessionStorage.getItem('type') === 'admin') {
               that.$router.push("/queryGradeCourse")
