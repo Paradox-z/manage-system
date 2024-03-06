@@ -77,7 +77,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          // 通过前端校验
+          // The front-end proofreading is done.
           const that = this
           const sid = that.ruleForm.sid
           const cid = that.ruleForm.cid
