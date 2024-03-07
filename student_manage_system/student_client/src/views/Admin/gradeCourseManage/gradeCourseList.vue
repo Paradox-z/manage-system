@@ -13,7 +13,7 @@
       </el-table-column>
       <el-table-column
           prop="cname"
-          label="课程名"
+          label="Course name"
           width="150">
       </el-table-column>
       <el-table-column
