@@ -4,7 +4,7 @@
       <el-main>
         <el-card>
           <el-form :inline="true" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
-            <el-form-item label="学号" prop="sid">
+            <el-form-item label="Student ID" prop="sid">
               <el-input v-model.number="ruleForm.sid"></el-input>
             </el-form-item>
             <el-form-item label="学生名" prop="sname">
