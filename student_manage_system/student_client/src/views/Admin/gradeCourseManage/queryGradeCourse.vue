@@ -7,10 +7,10 @@
             <el-form-item label="Student ID" prop="sid">
               <el-input v-model.number="ruleForm.sid"></el-input>
             </el-form-item>
-            <el-form-item label="学生名" prop="sname">
+            <el-form-item label="Student name" prop="sname">
               <el-input v-model="ruleForm.sname"></el-input>
             </el-form-item>
-            <el-form-item label="模糊查询" prop="sFuzzy">
+            <el-form-item label="Fuzzy enquiry" prop="sFuzzy">
               <el-switch v-model="ruleForm.sFuzzy"></el-switch>
             </el-form-item>
             <el-form-item label="工号" prop="tid">
