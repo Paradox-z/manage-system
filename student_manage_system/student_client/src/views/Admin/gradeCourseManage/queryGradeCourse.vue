@@ -13,10 +13,10 @@
             <el-form-item label="Fuzzy enquiry" prop="sFuzzy">
               <el-switch v-model="ruleForm.sFuzzy"></el-switch>
             </el-form-item>
-            <el-form-item label="工号" prop="tid">
+            <el-form-item label="Teacher ID" prop="tid">
               <el-input v-model.number="ruleForm.tid"></el-input>
             </el-form-item>
-            <el-form-item label="教师名" prop="tname">
+            <el-form-item label="Teacher name" prop="tname">
               <el-input v-model="ruleForm.tname"></el-input>
             </el-form-item>
             <el-form-item label="模糊查询" prop="tFuzzy">
