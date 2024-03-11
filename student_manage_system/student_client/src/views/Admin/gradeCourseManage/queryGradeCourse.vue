@@ -19,10 +19,10 @@
             <el-form-item label="Teacher name" prop="tname">
               <el-input v-model="ruleForm.tname"></el-input>
             </el-form-item>
-            <el-form-item label="模糊查询" prop="tFuzzy">
+            <el-form-item label="Fuzzy search" prop="tFuzzy">
               <el-switch v-model="ruleForm.tFuzzy"></el-switch>
             </el-form-item>
-            <el-form-item label="课程号" prop="cid">
+            <el-form-item label="Course ID" prop="cid">
               <el-input v-model.number="ruleForm.cid"></el-input>
             </el-form-item>
             <el-form-item label="课程名" prop="cname">
