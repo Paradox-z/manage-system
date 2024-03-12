@@ -25,7 +25,7 @@
             <el-form-item label="Course ID" prop="cid">
               <el-input v-model.number="ruleForm.cid"></el-input>
             </el-form-item>
-            <el-form-item label="课程名" prop="cname">
+            <el-form-item label="Course name" prop="cname">
               <el-input v-model="ruleForm.cname"></el-input>
             </el-form-item>
             <el-form-item label="模糊查询" prop="cFuzzy">
