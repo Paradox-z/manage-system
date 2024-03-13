@@ -10,7 +10,7 @@
             <el-form-item label="Student name" prop="sname">
               <el-input v-model="ruleForm.sname"></el-input>
             </el-form-item>
-            <el-form-item label="Fuzzy enquiry" prop="sFuzzy">
+            <el-form-item label="Fuzzy search" prop="sFuzzy">
               <el-switch v-model="ruleForm.sFuzzy"></el-switch>
             </el-form-item>
             <el-form-item label="Teacher ID" prop="tid">
