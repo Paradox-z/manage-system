@@ -28,7 +28,7 @@
             <el-form-item label="Course name" prop="cname">
               <el-input v-model="ruleForm.cname"></el-input>
             </el-form-item>
-            <el-form-item label="模糊查询" prop="cFuzzy">
+            <el-form-item label="Fuzzy search" prop="cFuzzy">
               <el-switch v-model="ruleForm.cFuzzy"></el-switch>
             </el-form-item>
             <el-form-item label="成绩下限" prop="lowBound">
