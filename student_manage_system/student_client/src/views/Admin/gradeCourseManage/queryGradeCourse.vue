@@ -31,7 +31,7 @@
             <el-form-item label="Fuzzy search" prop="cFuzzy">
               <el-switch v-model="ruleForm.cFuzzy"></el-switch>
             </el-form-item>
-            <el-form-item label="成绩下限" prop="lowBound">
+            <el-form-item label="Lowbound of Grade" prop="lowBound">
               <el-input v-model.number="ruleForm.lowBound"></el-input>
             </el-form-item>
             <el-form-item label="成绩上限" prop="highBound">
