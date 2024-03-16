@@ -34,7 +34,7 @@
             <el-form-item label="Lowbound of Grade" prop="lowBound">
               <el-input v-model.number="ruleForm.lowBound"></el-input>
             </el-form-item>
-            <el-form-item label="成绩上限" prop="highBound">
+            <el-form-item label="Upperbound of Grade" prop="highBound">
               <el-input v-model.number="ruleForm.highBound"></el-input>
             </el-form-item>
             <el-form-item label="选择学期">
