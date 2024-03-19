@@ -38,7 +38,7 @@
               <el-input v-model.number="ruleForm.highBound"></el-input>
             </el-form-item>
             <el-form-item label="Term selection">
-              <el-select v-model="ruleForm.term" placeholder="请选择学期">
+              <el-select v-model="ruleForm.term" placeholder="Select the term please.">
                 <el-option v-for="(item, index) in termList" :key="index" :label="item" :value="item"></el-option>
               </el-select>
             </el-form-item>
