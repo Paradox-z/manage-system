@@ -9,7 +9,7 @@
       <el-table-column
           fixed
           prop="cid"
-          label="课号"
+          label="Course number"
           width="150">
       </el-table-column>
       <el-table-column
