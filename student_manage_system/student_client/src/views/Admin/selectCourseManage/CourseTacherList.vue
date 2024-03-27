@@ -14,7 +14,7 @@
       </el-table-column>
       <el-table-column
           prop="cname"
-          label="课程号"
+          label="Course number"
           width="150">
       </el-table-column>
       <el-table-column
