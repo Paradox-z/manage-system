@@ -19,7 +19,7 @@
       </el-table-column>
       <el-table-column
           prop="tid"
-          label="教师号"
+          label="Teacher number"
           width="150">
       </el-table-column>
       <el-table-column
