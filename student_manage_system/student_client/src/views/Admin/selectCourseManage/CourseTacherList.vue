@@ -32,7 +32,7 @@
           width="100">
         <template slot-scope="scope">
           <el-popconfirm
-              confirm-button-text='删除'
+              confirm-button-text='Delete'
               cancel-button-text='取消'
               icon="el-icon-info"
               icon-color="red"
