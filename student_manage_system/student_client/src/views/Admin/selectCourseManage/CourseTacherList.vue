@@ -36,7 +36,7 @@
               cancel-button-text='Cancel'
               icon="el-icon-info"
               icon-color="red"
-              title="删除不可复原"
+              title="The deleted option cannot be recovered."
               @confirm="deleteCourseTeacher(scope.row)"
           >
             <el-button slot="reference" type="text" size="small">删除</el-button>
