@@ -39,7 +39,7 @@
               title="The deleted option cannot be recovered."
               @confirm="deleteCourseTeacher(scope.row)"
           >
-            <el-button slot="reference" type="text" size="small">删除</el-button>
+            <el-button slot="reference" type="text" size="small">Delete</el-button>
           </el-popconfirm>
         </template>
       </el-table-column>
