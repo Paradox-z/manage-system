@@ -75,7 +75,7 @@ export default {
         if (resp.data === true) {
           that.$message({
             showClose: true,
-            message: '选课成功',
+            message: 'Selected courses',
             type: 'success'
           });
         }
