@@ -82,7 +82,7 @@ export default {
         else {
           that.$message({
             showClose: true,
-            message: '选课出错，请联系管理员',
+            message: 'Failed to select courses, please contact the administrator.',
             type: 'error'
           });
         }
