@@ -95,7 +95,7 @@ export default {
         if (resp.data === true) {
           that.$message({
             showClose: true,
-            message: '删除成功',
+            message: 'Deleted',
             type: 'success'
           });
           window.location.reload()
