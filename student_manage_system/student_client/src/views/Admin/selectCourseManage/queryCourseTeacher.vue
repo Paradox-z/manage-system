@@ -7,7 +7,7 @@
             <el-form-item label="Work identity" prop="tid">
               <el-input v-model.number="ruleForm.tid"></el-input>
             </el-form-item>
-            <el-form-item label="教师名" prop="tname">
+            <el-form-item label="Teacher name" prop="tname">
               <el-input v-model.number="ruleForm.tname"></el-input>
             </el-form-item>
             <el-form-item label="教师模糊查询">
