@@ -13,7 +13,7 @@
             <el-form-item label="Fuzzy enquiry the teachers' list">
               <el-switch v-model="ruleForm.tFuzzy"></el-switch>
             </el-form-item>
-            <el-form-item label="课程号" prop="cid">
+            <el-form-item label="Course number" prop="cid">
               <el-input v-model.number="ruleForm.cid"></el-input>
             </el-form-item>
             <el-form-item label="课程名" prop="cname">
