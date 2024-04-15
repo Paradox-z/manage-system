@@ -19,7 +19,7 @@
             <el-form-item label="Course name" prop="cname">
               <el-input v-model.number="ruleForm.cname"></el-input>
             </el-form-item>
-            <el-form-item label="课程模糊查询">
+            <el-form-item label="Fuzzy enquiry for courses.">
               <el-switch v-model="ruleForm.cFuzzy"></el-switch>
             </el-form-item>
             <el-form-item>
