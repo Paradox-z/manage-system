@@ -24,7 +24,7 @@
       </el-table-column>
       <el-table-column
           prop="tname"
-          label="教师名"
+          label="Teacher name"
           width="100">
       </el-table-column>
       <el-table-column
