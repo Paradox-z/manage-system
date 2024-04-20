@@ -40,7 +40,7 @@
       </el-table-column>
       <el-table-column
           prop="grade"
-          label="成绩"
+          label="Mark"
           width="100">
       </el-table-column>
       <el-table-column
