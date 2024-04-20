@@ -35,7 +35,7 @@
       </el-table-column>
       <el-table-column
           prop="sname"
-          label="学生名"
+          label="Student name"
           width="100">
       </el-table-column>
       <el-table-column
