@@ -45,7 +45,7 @@
       </el-table-column>
       <el-table-column
           prop="term"
-          label="学期"
+          label="Semester"
           width="100">
       </el-table-column>
       <el-table-column
