@@ -54,7 +54,7 @@
         <template slot-scope="scope">
           <el-popconfirm
               confirm-button-text='Delete'
-              cancel-button-text='取消'
+              cancel-button-text='Cancel'
               icon="el-icon-info"
               icon-color="red"
               title="删除不可复原"
