@@ -60,7 +60,7 @@
               title="删除不可复原"
               @confirm="deleteTeacher(scope.row)"
           >
-            <el-button slot="reference" type="text" size="small">删除</el-button>
+            <el-button slot="reference" type="text" size="small">Delete</el-button>
           </el-popconfirm>
           <el-button @click="editor(scope.row)" type="text" size="small">编辑</el-button>
         </template>
