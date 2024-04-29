@@ -149,7 +149,7 @@ export default {
   watch: {
     ruleForm: {
       handler(newRuleForm, oldRuleForm) {
-        console.log("组件监听 form")
+        console.log("Module Monitor form")
         console.log(newRuleForm)
         const that = this
         that.tmpList = null
