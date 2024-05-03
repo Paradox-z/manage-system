@@ -57,7 +57,7 @@
               cancel-button-text='Cancel'
               icon="el-icon-info"
               icon-color="red"
-              title="删除不可复原"
+              title="Irreversible deletion"
               @confirm="deleteTeacher(scope.row)"
           >
             <el-button slot="reference" type="text" size="small">Delete</el-button>
