@@ -103,7 +103,7 @@ export default {
         else {
           that.$message({
             showClose: true,
-            message: '删除出错，请查询数据库连接',
+            message: 'Please check the database connection before attempting to delete the file.',
             type: 'error'
           });
         }
