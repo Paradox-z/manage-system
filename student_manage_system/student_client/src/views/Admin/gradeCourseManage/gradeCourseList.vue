@@ -110,7 +110,7 @@ export default {
       }).catch(function (error) {
         that.$message({
           showClose: true,
-          message: '删除出错，存在外键依赖',
+          message: 'Failed to delete, foreign key dependency.',
           type: 'error'
         });
       })
