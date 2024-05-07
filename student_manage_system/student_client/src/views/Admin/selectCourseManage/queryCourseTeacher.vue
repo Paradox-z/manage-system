@@ -50,7 +50,7 @@ export default {
       },
       rules: {
         tid: [
-          { type: 'number', message: '必须是数字类型' }
+          { type: 'number', message: 'Need to be numeric.' }
         ],
         cid: [
           { type: 'number', message: '必须是数字类型' }
