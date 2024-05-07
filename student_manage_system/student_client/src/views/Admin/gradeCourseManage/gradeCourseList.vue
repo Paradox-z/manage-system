@@ -110,7 +110,7 @@ export default {
       }).catch(function (error) {
         that.$message({
           showClose: true,
-          message: 'Failed to delete, foreign key dependency.',
+          message: 'Failed to delete, there is the foreign key dependency.',
           type: 'error'
         });
       })
