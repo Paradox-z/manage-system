@@ -29,7 +29,7 @@ export default {
           { min: 2, max: 5, message: '长度在 2 到 5 个字符', trigger: 'blur' }
         ],
         password: [
-          { required: true, message: '请输入密码', trigger: 'change' }
+          { required: true, message: 'Enter the password:', trigger: 'change' }
         ],
       }
     };
