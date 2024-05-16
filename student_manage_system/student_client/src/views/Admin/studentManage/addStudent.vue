@@ -45,7 +45,7 @@ export default {
             if (resp.data === true) {
               that.$message({
                 showClose: true,
-                message: '插入成功',
+                message: 'Insert successfully.',
                 type: 'success'
               });
             }
