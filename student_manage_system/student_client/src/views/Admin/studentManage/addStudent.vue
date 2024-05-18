@@ -38,7 +38,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          // 通过前端校验
+          // Front-end check passed
           const that = this
           console.log(this.ruleForm)
           axios.post("http://localhost:10086/student/addStudent", this.ruleForm).then(function (resp) {
