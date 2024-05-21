@@ -50,7 +50,7 @@ export default {
               });
             }
             else {
-              that.$message.error('插入失败，请检查数据库');
+              that.$message.error('Failed to insert, please check the database.');
             }
             that.$router.push("/studentList")
           })
