@@ -4,7 +4,7 @@
       <el-form-item label="Student name" prop="sname">
         <el-input v-model="ruleForm.sname" :value="ruleForm.sname"></el-input>
       </el-form-item>
-      <el-form-item label="初始密码" prop="password">
+      <el-form-item label="Initial password" prop="password">
         <el-input v-model="ruleForm.password" :value="ruleForm.password"></el-input>
       </el-form-item>
       <el-form-item>
