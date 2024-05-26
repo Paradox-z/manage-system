@@ -30,7 +30,7 @@ export default {
           { min: 2, max: 5, message: 'The length should be between 2 and 5 characters.', trigger: 'blur' }
         ],
         password: [
-          { required: true, message: '请输入密码', trigger: 'change' }
+          { required: true, message: 'Password:', trigger: 'change' }
         ],
       }
     };
