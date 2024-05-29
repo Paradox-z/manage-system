@@ -63,7 +63,7 @@ export default {
               });
             }
             else {
-              that.$message.error('编辑失败，请检查数据库');
+              that.$message.error('Failed to edit, please check the database.');
             }
             that.$router.push("/studentList")
           })
