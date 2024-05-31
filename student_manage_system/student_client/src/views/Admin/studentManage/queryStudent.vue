@@ -7,7 +7,7 @@
             <el-form-item label="Student number" prop="sid">
               <el-input v-model.number="ruleForm.sid"></el-input>
             </el-form-item>
-            <el-form-item label="学生姓名" prop="sname">
+            <el-form-item label="Student name" prop="sname">
               <el-input v-model="ruleForm.sname"></el-input>
             </el-form-item>
             <el-form-item label="模糊查询" prop="password">
