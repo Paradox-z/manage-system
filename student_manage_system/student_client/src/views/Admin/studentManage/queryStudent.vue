@@ -10,7 +10,7 @@
             <el-form-item label="Student name" prop="sname">
               <el-input v-model="ruleForm.sname"></el-input>
             </el-form-item>
-            <el-form-item label="模糊查询" prop="password">
+            <el-form-item label="Fuzzy enquiry" prop="password">
               <el-switch v-model="ruleForm.password"></el-switch>
             </el-form-item>
             <el-form-item>
