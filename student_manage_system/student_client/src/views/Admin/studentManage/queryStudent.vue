@@ -16,7 +16,7 @@
             <el-form-item>
               <el-button type="primary" @click="submitForm('ruleForm')">Inquiring</el-button>
               <el-button @click="resetForm('ruleForm')">Reset</el-button>
-              <el-button @click="flush('ruleForm')">刷新</el-button>
+              <el-button @click="flush('ruleForm')">Flush</el-button>
             </el-form-item>
           </el-form>
         </el-card>
