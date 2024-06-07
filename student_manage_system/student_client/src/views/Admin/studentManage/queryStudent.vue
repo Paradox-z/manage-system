@@ -36,7 +36,7 @@ export default {
       },
       rules: {
         sid: [
-          { type: 'number', message: '必须是数字类型' }
+          { type: 'number', message: 'Number type is mandatory.' }
         ],
         sname: [
 
