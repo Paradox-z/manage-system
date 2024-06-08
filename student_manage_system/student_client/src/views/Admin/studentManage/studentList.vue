@@ -7,7 +7,7 @@
       <el-table-column
           fixed
           prop="sid"
-          label="学号"
+          label="Student number"
           width="150">
       </el-table-column>
       <el-table-column
