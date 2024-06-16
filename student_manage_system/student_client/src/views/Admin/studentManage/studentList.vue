@@ -34,7 +34,7 @@
           >
             <el-button slot="reference" type="text" size="small">Delete</el-button>
           </el-popconfirm>
-          <el-button @click="editor(scope.row)" type="text" size="small">编辑</el-button>
+          <el-button @click="editor(scope.row)" type="text" size="small">Edit</el-button>
         </template>
       </el-table-column>
     </el-table>
