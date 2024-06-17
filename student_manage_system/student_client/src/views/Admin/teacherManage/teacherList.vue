@@ -7,7 +7,7 @@
       <el-table-column
           fixed
           prop="tid"
-          label="工号"
+          label="Teacher number"
           width="150">
       </el-table-column>
       <el-table-column
