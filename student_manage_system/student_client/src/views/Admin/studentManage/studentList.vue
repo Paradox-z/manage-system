@@ -58,7 +58,7 @@ export default {
         if (resp.data === true) {
           that.$message({
             showClose: true,
-            message: '删除成功',
+            message: 'Delete successfully',
             type: 'success'
           });
           console.log(that.tmpList === null)
