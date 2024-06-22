@@ -72,7 +72,7 @@ export default {
         else {
           that.$message({
             showClose: true,
-            message: '删除出错，请查询数据库连接',
+            message: 'Failed to delete, please checking your connection to database.',
             type: 'error'
           });
         }
