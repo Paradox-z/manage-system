@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-form style="width: 60%" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="教师姓名" prop="tname">
+      <el-form-item label="Teacher name" prop="tname">
         <el-input v-model="ruleForm.tname"></el-input>
       </el-form-item>
       <el-form-item label="初始密码" prop="password">
